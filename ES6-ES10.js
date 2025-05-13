@@ -1,4 +1,3 @@
-'strictly '
 //ES6 
 //1. let and const
 let firstName = "Alice";// can be accesssed only in block
