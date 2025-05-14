@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click me </button>
+
+    <div>
+        <ul id="unordedlist">
+            <li id="First">First</li>
+            <li id="Second">Second</li>
+            <li id="Third">Third</li>
+            <li id="Fourth">Fourth</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener('click', function () { alert('Button Clicked') });
+
+        //document.getElementById('unordedlist').addEventListener('click',function(e){console.log('Unordered list clicked'); e.preventDefault()},false);
+
+        // document.getElementById('unordedlist').addEventListener('click',function(e){console.log('Unordered list clicked')},false);
+        // document.getElementById('Second').addEventListener('click',function(e){console.log('clicked on Second list item')},false);
+
+        //prevent default propogation
+        //output if false { bubble propogation }
+        //clicked on Second list item
+        // Unordered list clicked
+
+
+        //capturing propogation
+        // document.getElementById('unordedlist').addEventListener('click',function(e){console.log('Unordered list clicked')},true);
+        // document.getElementById('Second').addEventListener('click',function(e){console.log('clicked on Second list item')},true);
+        //output if true 
+        // Unordered list clicked
+        //clicked on Second list item
+
+        document.querySelector('#unordedlist').addEventListener('click', function (e) {
+            console.log(e.target);
+            let item = e.target;
+            item.remove();
+        });
+    </script>
+</body>
+
+</html>
