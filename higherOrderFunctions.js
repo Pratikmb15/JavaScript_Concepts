@@ -17,3 +17,4 @@ function multiplier(factor){
 
 const double = multiplier(5);
 console.log(double(7));// output : 35
+
